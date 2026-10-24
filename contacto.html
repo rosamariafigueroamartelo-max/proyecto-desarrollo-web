@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactos | VaRo Vet</title>
+  <meta name="description" content="Dirección, teléfonos, correo y horario de VaRo Vet en Sahagún, Córdoba. Escríbenos para resolver tus dudas.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500;1,600;1,700&family=Outfit:wght@400;500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="VaRo Vet, bienestar animal. Ir al inicio">
+      <img src="img/logo.png" alt="" width="124" height="118">
+      <span class="brand-text"><span class="brand-name">VaRO Vet</span><span class="brand-tag">Bienestar animal</span></span>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="nav-toggle" aria-label="Abrir o cerrar el menú">
+    <label for="menu-toggle" class="menu-button"><i class="fa-solid fa-bars" aria-hidden="true"></i><span class="label">Menú</span></label>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html" aria-current="page">Contactos</a></li>
+        <li class="nav-cta"><a href="agendar-cita.html">Agenda tu cita</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="contact-hero" aria-labelledby="contacto-titulo">
+      <span class="deco paw-line d1" aria-hidden="true"></span>
+      <span class="deco leaf d2" aria-hidden="true"></span>
+      <figure class="contact-photo" style="margin:0">
+        <img src="img/contacto.jpg" alt="Un perro golden retriever y un gato gris, juntos" width="594" height="628">
+      </figure>
+      <article>
+        <h1 id="contacto-titulo" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">Contactos</h1>
+        <dl class="contact-list">
+          <div><dt><i class="fa-solid fa-location-dot" aria-hidden="true"></i></dt><dd><strong>Dirección</strong>Cr 20 #123-45<br>Sahagún-Colombia</dd></div>
+          <div><dt><i class="fa-solid fa-phone-volume" aria-hidden="true"></i></dt><dd><strong>Teléfono</strong><a href="tel:+573243630825">3243630825</a>-<a href="tel:+573024369562">3024369562</a></dd></div>
+          <div><dt><i class="fa-regular fa-envelope" aria-hidden="true"></i></dt><dd><strong>Correo</strong><a href="mailto:VaroVet@gmail.com">VaroVet@gmail.com</a></dd></div>
+          <div><dt><i class="fa-regular fa-clock" aria-hidden="true"></i></dt><dd><strong>Horario</strong>Lunes a Viernes: 8:00 a.m - 6:00 p.m<br>Sábado: 8:00 a.m - 1:00 p.m</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <section class="section light" aria-labelledby="mensaje-titulo">
+      <section class="container">
+        <header class="section-head"><h2 id="mensaje-titulo">Envíanos un <em>mensaje</em></h2></header>
+        <form class="form form-box" action="#" method="post">
+          <section class="form-grid">
+            <p class="field"><label for="c-nombre">Nombre completo <span class="req">*</span></label>
+              <input id="c-nombre" name="nombre" type="text" required minlength="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' ]{3,60}" title="Solo letras y espacios, entre 3 y 60 caracteres" autocomplete="name" placeholder="Ingresar su nombre"></p>
+            <p class="field"><label for="c-correo">Correo electrónico <span class="req">*</span></label>
+              <input id="c-correo" name="correo" type="email" required autocomplete="email" placeholder="nombre@correo.com"></p>
+            <p class="field"><label for="c-telefono">Teléfono</label>
+              <input id="c-telefono" name="telefono" type="tel" pattern="3[0-9]{9}" title="Celular colombiano de 10 dígitos que empieza por 3" autocomplete="tel" placeholder="3001234567"></p>
+            <p class="field"><label for="c-asunto">Asunto <span class="req">*</span></label>
+              <select id="c-asunto" name="asunto" required>
+                <option value="">Seleccione un asunto</option>
+                <option>Consulta sobre un servicio</option><option>Cambiar o cancelar una cita</option><option>Resultados de exámenes</option><option>Otro</option>
+              </select></p>
+            <p class="field full"><label for="c-mensaje">Mensaje <span class="req">*</span></label>
+              <textarea id="c-mensaje" name="mensaje" required minlength="10" maxlength="500" placeholder="Escribe tu mensaje"></textarea>
+              <small>Entre 10 y 500 caracteres.</small></p>
+            <p class="check full"><input id="c-acepto" name="acepto" type="checkbox" required><label for="c-acepto">Acepto que VaRo Vet use mis datos para responder este mensaje. <span class="req">*</span></label></p>
+          </section>
+          <p class="form-actions"><button class="btn btn-primary" type="submit">Enviar mensaje</button><button class="btn btn-outline" type="reset">Borrar</button></p>
+        </form>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <section class="footer-grid" aria-label="Información de la clínica">
+      <a class="brand" href="index.html" aria-label="VaRo Vet, ir al inicio">
+        <img src="img/logo.png" alt="" width="124" height="118">
+        <span class="brand-text"><span class="brand-name">VaRO Vet</span><span class="brand-tag">Bienestar animal</span></span>
+      </a>
+      <nav aria-label="Enlaces del sitio">
+        <h2>Explora</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contactos</a></li>
+          <li><a href="agendar-cita.html">Agenda tu cita</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Contacto</h2>
+        <address>Cr 20 #123-45, Sahagún - Colombia<br><a href="mailto:VaroVet@gmail.com">VaroVet@gmail.com</a></address>
+      </article>
+      <ul class="social" aria-label="Redes sociales">
+        <li><a href="#" aria-label="VaRo Vet en Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="VaRo Vet en Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://wa.me/573243630825" aria-label="Escribir por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
+    <p class="copy">© 2026 VaRo Vet. Proyecto académico de Desarrollo Web I, Universidad de Córdoba.</p>
+  </footer>
+</body>
+</html>

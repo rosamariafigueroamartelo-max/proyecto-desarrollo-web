@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda tu cita | VaRo Vet</title>
+  <meta name="description" content="Solicita una cita veterinaria en VaRo Vet: completa tus datos y los de tu mascota.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500;1,600;1,700&family=Outfit:wght@400;500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="VaRo Vet, bienestar animal. Ir al inicio">
+      <img src="img/logo.png" alt="" width="124" height="118">
+      <span class="brand-text"><span class="brand-name">VaRO Vet</span><span class="brand-tag">Bienestar animal</span></span>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="nav-toggle" aria-label="Abrir o cerrar el menú">
+    <label for="menu-toggle" class="menu-button"><i class="fa-solid fa-bars" aria-hidden="true"></i><span class="label">Menú</span></label>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="contacto.html">Contactos</a></li>
+        <li class="nav-cta"><a href="agendar-cita.html" aria-current="page">Agenda tu cita</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="contenido">
+    <section class="booking" aria-labelledby="cita-titulo">
+      <picture class="booking-photo">
+        <img src="img/agendar.png" alt="Gato atigrado en brazos de una veterinaria con guantes azules" width="612" height="595" fetchpriority="high">
+      </picture>
+      <header class="booking-title"><h1 id="cita-titulo"><em>Datos</em> para tu cita</h1></header>
+      <form class="form form-box booking-form" action="#" method="post">
+        <section class="form-grid">
+          <p class="field full"><label for="a-propietario">Nombre completo <span class="req">*</span></label>
+            <input id="a-propietario" name="propietario" type="text" required minlength="3" maxlength="60" pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ' ]{3,60}" title="Solo letras y espacios, entre 3 y 60 caracteres" autocomplete="name" placeholder="Ingresar su nombre"></p>
+          <p class="field"><label for="a-telefono">Teléfono <span class="req">*</span></label>
+            <input id="a-telefono" name="telefono" type="tel" required pattern="3[0-9]{9}" title="Celular colombiano de 10 dígitos que empieza por 3" autocomplete="tel" placeholder="Ingresar su teléfono"></p>
+          <p class="field"><label for="a-correo">Correo electrónico <span class="req">*</span></label>
+            <input id="a-correo" name="correo" type="email" required autocomplete="email" placeholder="nombre@correo.com"></p>
+          <p class="field"><label for="a-mascota">Mascota <span class="req">*</span></label>
+            <input id="a-mascota" name="mascota" type="text" required minlength="2" maxlength="30" placeholder="Ingrese el nombre de la mascota"></p>
+          <p class="field"><label for="a-tipo">Tipo de mascota <span class="req">*</span></label>
+            <select id="a-tipo" name="tipo" required>
+              <option value="">Seleccione el tipo de mascota</option>
+              <option>Perro</option><option>Gato</option><option>Ave</option><option>Conejo</option><option>Otro</option>
+            </select></p>
+          <p class="field"><label for="a-edad">Edad de la mascota (años)</label>
+            <input id="a-edad" name="edad" type="number" min="0" max="30" step="1" inputmode="numeric" placeholder="Entre 0 y 30"></p>
+          <p class="field"><label for="a-servicio">Servicio <span class="req">*</span></label>
+            <select id="a-servicio" name="servicio" required>
+              <option value="">Seleccione un servicio</option>
+              <option value="consulta">Consulta veterinaria</option><option value="vacunacion">Vacunación</option><option value="cirugia">Cirugía</option>
+              <option value="laboratorio">Exámenes de laboratorio</option><option value="odontologia">Odontología</option><option value="peluqueria">Peluquería</option>
+            </select></p>
+          <p class="field"><label for="a-fecha">Fecha <span class="req">*</span></label>
+            <input id="a-fecha" name="fecha" type="date" required min="2026-10-26" max="2027-03-31"></p>
+          <p class="field"><label for="a-hora">Hora <span class="req">*</span></label>
+            <input id="a-hora" name="hora" type="time" required min="08:00" max="17:30" step="1800"><small>Entre 8:00 a.m. y 5:30 p.m.</small></p>
+          <p class="check full"><input id="a-acepto" name="acepto" type="checkbox" required><label for="a-acepto">Acepto que VaRo Vet use mis datos para gestionar esta cita. <span class="req">*</span></label></p>
+        </section>
+        <p class="form-actions"><button class="btn btn-primary btn-block" type="submit">Enviar solicitud de cita</button></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <section class="footer-grid" aria-label="Información de la clínica">
+      <a class="brand" href="index.html" aria-label="VaRo Vet, ir al inicio">
+        <img src="img/logo.png" alt="" width="124" height="118">
+        <span class="brand-text"><span class="brand-name">VaRO Vet</span><span class="brand-tag">Bienestar animal</span></span>
+      </a>
+      <nav aria-label="Enlaces del sitio">
+        <h2>Explora</h2>
+        <ul class="footer-links">
+          <li><a href="index.html">Inicio</a></li><li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="servicios.html">Servicios</a></li><li><a href="contacto.html">Contactos</a></li>
+          <li><a href="agendar-cita.html">Agenda tu cita</a></li>
+        </ul>
+      </nav>
+      <article>
+        <h2>Contacto</h2>
+        <address>Cr 20 #123-45, Sahagún - Colombia<br><a href="mailto:VaroVet@gmail.com">VaroVet@gmail.com</a></address>
+      </article>
+      <ul class="social" aria-label="Redes sociales">
+        <li><a href="#" aria-label="VaRo Vet en Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="#" aria-label="VaRo Vet en Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://wa.me/573243630825" aria-label="Escribir por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
+    <p class="copy">© 2026 VaRo Vet. Proyecto académico de Desarrollo Web I, Universidad de Córdoba.</p>
+  </footer>
+</body>
+</html>
